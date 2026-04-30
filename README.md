@@ -58,7 +58,6 @@ Inspired by the precision of the Japanese Shinkansen, this project aims to bridg
 
 ## 🛠️ The System Architecture
 The goal was simple: Trigger a "Door Enable" signal ($Logic \ 1$) only when the train is within a $10m$ safety window of a $500m$ station mark.
-
 ### **Signal Chain:**
 `Ramp (100m/s)` ➔ `Sum (+500, -Train)` ➔ `Absolute Value (|u|)` ➔ `Compare (< 10)` ➔ `Scope`.
 
@@ -84,4 +83,32 @@ The simulation successfully produced a precise pulse at $t=4.9s$, proving the sa
 ****model and results are given below:
 <img width="642" height="179" alt="firstone" src="https://github.com/user-attachments/assets/5b338200-de58-4e4a-8d83-1489b725c4a8" />
 <img width="1352" height="613" alt="firstoneresults" src="https://github.com/user-attachments/assets/91ea48dd-0c89-4128-8374-492f1fd6e0a4" />
+
+----------------------------------------------------------------------------------------------------------------------------
+Date:30 April 2026
+###Project- The Wall of Air###
+---Non-Linear Drag Modeling
+""CONTEXT""
+In 1955, the French BB9004 hit 331Km/hr , but the physics was brutal-the air resistance was so high it began melting the pantograph and the tracks. This Project is a "Simulink" simulation of that EXACT STRUGGLE: The battle between... Engine Thrust...&&& Non-Linear Aerodynamic Drag....^-^
+
+####THE SYSTEM ARCHITECTURE.....
+I built a "closed-loop Feedback System to model how air resistance grows with square of velocity(v^2).
+####The MATHEMATICAL "LOGIC"
+1) Summation: Fnet= Fthrust-Fdrag
+2) The "vilian" (Drag): Fdrag = Cd.v^2
+3) Turning : i iterated from a stress-test value of Cd=10 to Cd=5 to find a realistic "Saturation Curve".
+   ---
+   ***RESULTS***---> The Assymptotic Curve
+   By extending the simulation to 1000 seconds , i captured the "saturation point" of the locomotive.
+   1) Linear Phase(t<200s):The engine "dominates": "Acceleration" is nearly "constant".
+   2) The "Knee"(t ~400s): The v^2 Feedback starts "Choking" , the "acceleartion".
+   3) Terminal Velocity: The curve flattens at apprix 80m/sec (288 km/hr). At this point , the engine is no longer speeding up the train --- its just ---"Fighting the AIR."--------
+      ***this PROJECT*** Proves the brute force power has a limit. In high speed systems, the "Wall of Air", eventually wins unless the system is  ***"streamlined"***. This simulation is the **bridge between Newtonian mechanics and control systems**
+### Below are the model and results....
+<img width="656" height="243" alt="drag5model" src="https://github.com/user-attachments/assets/ea14e79b-8bf5-40e3-afbf-9a68fd33a79d" />
+<img width="1351" height="556" alt="drag5results" src="https://github.com/user-attachments/assets/9d336c10-add8-4bd1-ace7-8f0e98cd06fc" />
+
+
+
+
 
