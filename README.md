@@ -108,7 +108,40 @@ I built a "closed-loop Feedback System to model how air resistance grows with sq
 <img width="656" height="243" alt="drag5model" src="https://github.com/user-attachments/assets/ea14e79b-8bf5-40e3-afbf-9a68fd33a79d" />
 <img width="1351" height="556" alt="drag5results" src="https://github.com/user-attachments/assets/9d336c10-add8-4bd1-ace7-8f0e98cd06fc" />
 
+-----------------------------------------------------------------------------------------------------------------------------
+Date: 02 May 2026
+## The Model (pantograph) first seeing its Failure &&& then it muscing up with the help of PID and Actuator ## 
+**Phase 1: The "1982 TGV Failure" Scenario**
+​This model replicates the critical failure point identified during early TGV speed trials attempting to cross the 380 km/h barrier. At these velocities, the wave speed of the catenary (overhead wire) approaches the train's speed, creating a "Sonic Boom" effect in the wire.
+​The Passive Failure: Without active control, the pantograph acted as a simple second-order mass-spring system.
+​The Consequence: As shown in the "Failing System" scope, the mechanical resonance caused the head to bounce completely off the wire (Zero-Crossings). This resulted in massive electrical arcing, localized melting of the contact strip, and immediate power loss.
+**The Problem: A standard mass-spring-damper setup.**
+​Mass (M): 8 kg (Contact Head)
+​Stiffness (K): 100 N/m
+​Disturbance: Band-limited White Noise (Simulating wire jitter at high velocity).
+## THE MODEL AND RESULTS ARE HERE (For PHASE 01)##
+<img width="666" height="240" alt="Model3" src="https://github.com/user-attachments/assets/9ae09880-2cd9-4672-b675-ac213b3797cc" />
+<img width="1356" height="573" alt="thirdprojeresults" src="https://github.com/user-attachments/assets/f29bd45f-9b95-44dc-936d-4a77fc7db347" />
 
+----------------------------------------------------------------------------------------------------------------------------
 
+## 😎Phase 2: The "Savage" PID Correction ##
+​To solve the instability, I implemented a Closed-Loop Feedback Controller mimicking the active pneumatic actuators used in 3rd Gen TGVs.
+​The Control Logic:
+​--->**Error Detection: e(t) = {Target Height} (0.7) - {Actual Height}.
+​--->PID Processing: * Proportional: Instantaneous response to wire displacement.
+​--->Integral: Eliminates steady-state error caused by aerodynamic lift.
+​--->Derivative: The "Braking" force that predicts and kills high-frequency oscillation.**
+---------------------------------------------------------------------------------------------------------------------------
+​***✔The Result: The "Chaos" of the first model is suppressed. The system achieves a stable Step Response with a controlled maximum overshoot, settling into a flat line at 0.7m. This ensures 100% contact reliability even under high-noise conditions.***
+
+​🔬 **Tech Stack & Engineering Concepts**
+​Simulink: Dynamic system modeling & ODE solving.
+​Control Theory: PID Tuning, Stability Analysis, Disturbance Rejection.
+​Railway Engineering: High-speed pantograph-catenary interaction physics.
+
+## THE MODEL AND RESULTS ARE HERE (For PHASE 02) ##
+<img width="821" height="292" alt="advmodel3" src="https://github.com/user-attachments/assets/88e05a28-91dd-47de-97e2-2f8f6245684d" />
+<img width="1353" height="562" alt="advproje3results" src="https://github.com/user-attachments/assets/63a64f3c-9666-4c7a-8bcd-3a7b7962cb6c" />
 
 
