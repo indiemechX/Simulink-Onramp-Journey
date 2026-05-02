@@ -144,7 +144,6 @@ The Passive Failure: Without active control, the pantograph acted as a simple se
 👾​Simulink: Dynamic system modeling & ODE solving.
 👾​Control Theory: PID Tuning, Stability Analysis, Disturbance Rejection.
 ​Railway Engineering: High-speed pantograph-catenary interaction physics.
-
 ## 🐱‍👤THE MODEL AND RESULTS ARE HERE (For PHASE 02) ##
 <img width="821" height="292" alt="advmodel3" src="https://github.com/user-attachments/assets/88e05a28-91dd-47de-97e2-2f8f6245684d" />
 <img width="1353" height="562" alt="advproje3results" src="https://github.com/user-attachments/assets/63a64f3c-9666-4c7a-8bcd-3a7b7962cb6c" />
