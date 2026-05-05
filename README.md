@@ -148,4 +148,22 @@ The Passive Failure: Without active control, the pantograph acted as a simple se
 <img width="821" height="292" alt="advmodel3" src="https://github.com/user-attachments/assets/88e05a28-91dd-47de-97e2-2f8f6245684d" />
 <img width="1353" height="562" alt="advproje3results" src="https://github.com/user-attachments/assets/63a64f3c-9666-4c7a-8bcd-3a7b7962cb6c" />
 
+------
+---
+
+## 🛠️ Integrated Hardware Development (Arduino Uno R3)
+Expanding the project scope from simulations to physical hardware-in-the-loop (HIL) testing. 
+
+### 🚥 Module 01: System Status & Timing Control
+Verified the operational logic for the Casino Game heartbeat using an external LED. This ensures the timing sequences for game states are accurate before full integration.
+
+#### Hardware in Action
+<img width="600" alt="Arduino Blink Demo" src="Hardware-Experiments/led_blink_demo.gif" />
+
+**Technical Highlights:**
+* **Controller:** Arduino Uno R3 (ATmega328P)
+* **Execution:** Synchronized 10-cycle blink sequence at 250ms intervals.
+* **Architecture:** Modular file structure for isolated hardware verification.
+
+
 
