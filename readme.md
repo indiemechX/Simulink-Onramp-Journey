@@ -46,7 +46,16 @@ A closed-loop PID motor speed control simulation on **STM32 Nucleo-C031C6** usin
 - `sketch.ino` — STM32 closed-loop PID controller and virtual first-order motor model
 
 - `diagram.json` — Wokwi hardware connections
-<img width="648" height="553" alt="hardware" src="https://github.com/user-attachments/assets/8279838e-76a0-4644-8a27-6abff0997c5e" />
 
 - — Case 1 recordings
+- <img width="640" height="360" alt="case1(telemetry)" src="https://github.com/user-attachments/assets/8d7236c4-bf4d-4301-9375-d27f169d8e2d" />
+<img width="640" height="360" alt="case1(step_response)" src="https://github.com/user-attachments/assets/bc43806a-c2d4-48ed-9dd7-f1fa23188158" />
+
+
 -  — Case 2 recordings
+<img width="360" height="640" alt="case2(telemetry)" src="https://github.com/user-attachments/assets/cd5e5ab9-4bed-4e8a-b7dc-0d01ab532c22" />
+<img width="478" height="850" alt="case2--step_response-ezgif com-optimize (1)" src="https://github.com/user-attachments/assets/c8ab9655-1dc0-4b79-94e5-24c6e93ffef7" />
+
+
+
+
