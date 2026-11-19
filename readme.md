@@ -43,9 +43,9 @@ A closed-loop PID motor speed control simulation on **STM32 Nucleo-C031C6** usin
 - Increasing K_p and K_i in Case 2 speeds up the response and eliminates steady-state error so `Speed` converges to `Setpoint`.
 
 ## Files in This Phase
-- `sketch.ino` — STM32 closed-loop PID controller and virtual first-order motor model
+- [`sketch.ino`](sketch.ino) — STM32 closed-loop PID controller and virtual first-order motor model
 
-- `diagram.json` — Wokwi hardware connections
+- [`diagram.json`](diagram.json) — Wokwi hardware connections
 
 - — Case 1 recordings
 - <img width="640" height="360" alt="case1(telemetry)" src="https://github.com/user-attachments/assets/8d7236c4-bf4d-4301-9375-d27f169d8e2d" />
